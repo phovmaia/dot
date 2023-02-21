@@ -1,0 +1,153 @@
+# ~/.config/starship.toml
+
+add_newline = false  # Inserts a blank line between shell prompts
+command_timeout = 1000  # Change command timeout from 500 to 1000 ms
+format = """$env_var $all"""  # Add custom formatting before other stuff
+
+# Drop ugly default prompt characters
+[character]
+success_symbol = ""
+error_symbol = ""
+
+# ---
+
+# Shows an icon depending on what distro it is running on
+[env_var.STARSHIP_DISTRO]
+format = '[$env_value](bold white) '
+variable = "STARSHIP_DISTRO"
+disabled = false
+
+# Shows the current username
+[env_var.USER]
+format = '[$env_value](bold white) '
+variable = "USER"
+disabled = false
+
+# Shows an icon depending on what device it is running on
+[env_var.STARSHIP_DEVICE]
+format = 'on [$env_value](bold yellow)'
+variable = "STARSHIP_DEVICE"
+disabled = false
+
+# ---
+
+# Shows the hostname
+[hostname]
+ssh_only = false
+format = "[$hostname](bold yellow) "
+disabled = false
+
+# Shows current directory
+[directory]
+truncation_length = 3
+truncation_symbol = "…/"
+home_symbol = " ~"
+read_only_style = "197"
+read_only = "  "
+format = "at [$path]($style)[$read_only]($read_only_style) "
+
+# Shows current git branch
+[git_branch]
+symbol = " "
+format = "via [$symbol$branch]($style) "
+# truncation_length = 4
+truncation_symbol = "…/"
+style = "bold green"
+
+# Shows current git status
+[git_status]
+format = '[\($all_status$ahead_behind\)]($style) '
+style = "bold green"
+conflicted = "⚔️ "
+ahead = "🏎️ 💨 ×${count}"
+behind = "🐢 ×${count}"
+diverged = "🔱 🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count}"
+untracked = "🛤️  ×${count}"
+stashed = "📦 "
+modified = "📝 ×${count}"
+staged = "🗃️  ×${count}"
+renamed = "📛 ×${count}"
+deleted = "🗑️  ×${count}"
+up_to_date = " "
+
+[kubernetes]
+disabled = true
+symbol = "☸ "
+format = '[$symbol$context( \($namespace\))]($style) in '
+style = "cyan bold"
+
+# ---
+
+[docker_context]
+disabled = false
+symbol = " "
+style = "blue bold"
+format = "via [$symbol$context]($style) "
+only_with_files = true
+
+[aws]
+disabled = false
+format = 'on [$symbol$profile(\($region\))]($style) '
+symbol = " "
+style = "bold yellow"
+
+[gcloud]
+disabled = false
+format = 'on [$symbol$account(\($region\))]($style) '
+symbol = " "
+style = "bold blue"
+
+[helm]
+disabled = false
+format = "via [$symbol$version]($style) "
+symbol = "⎈ "
+style = "bold white"
+
+[nodejs]
+disabled = false
+format = "via [$symbol$version]($style) "
+symbol = " "
+style = "bold green"
+
+[package]
+disabled = false
+format = "is [$symbol$version]($style) "
+symbol = " "
+style = "208 bold"
+display_private = false
+
+[python]
+disabled = false
+pyenv_version_name = false
+pyenv_prefix = "pyenv "
+python_binary = "python"
+format = 'via [${symbol}${pyenv_prefix}${version}( \($virtualenv\))]($style) '
+style = "yellow bold"
+symbol = " "
+
+[ruby]
+disabled = false
+format = "via [$symbol$version]($style) "
+symbol = " "
+style = "bold red"
+
+[rust]
+disabled = false
+format = "via [$symbol$version]($style) "
+symbol = " "
+style = "bold red"
+
+[terraform]
+disabled = false
+format = "via [$symbol$workspace]($style) "
+symbol = "ﰉ "
+style = "bold 105"
+
+[time]
+disabled = true
+format = "at [$time]($style) "
+style = "bold yellow"
+use_12hr = false
+time_format = ""
+utc_time_offset = "local"
+time_range = "-"
