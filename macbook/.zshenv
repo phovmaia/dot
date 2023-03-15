@@ -10,5 +10,5 @@ export ZSH="$HOME/.oh-my-zsh"
 # NVM directory
 export NVM_DIR="$HOME/.nvm"
 
-export EDITOR=lvim
-export KUBE_EDITOR=lvim
+export EDITOR=nvim
+export KUBE_EDITOR=nvim
