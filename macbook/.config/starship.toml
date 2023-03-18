@@ -1,14 +1,13 @@
 # ~/.config/starship.toml
 
 add_newline = false  # Inserts a blank line between shell prompts
-command_timeout = 1000  # Change command timeout from 500 to 1000 ms
+command_timeout = 10000  # Change command timeout from 500 to 1000 ms
 format = """$env_var $all"""  # Add custom formatting before other stuff
 
 # Drop ugly default prompt characters
 [character]
 success_symbol = ""
 error_symbol = ""
-
 # ---
 
 # Shows an icon depending on what distro it is running on
@@ -19,7 +18,7 @@ disabled = false
 
 # Shows the current username
 [env_var.USER]
-format = '[$env_value](bold white) '
+format = '[$env_value](bold white)'
 variable = "USER"
 disabled = false
 
@@ -27,52 +26,51 @@ disabled = false
 [env_var.STARSHIP_DEVICE]
 format = 'on [$env_value](bold yellow)'
 variable = "STARSHIP_DEVICE"
-disabled = false
+disabled = true
 
 # ---
-
-# Shows the hostname
 [hostname]
-ssh_only = false
+ssh_only = true
 format = "[$hostname](bold yellow) "
 disabled = false
 
-# Shows current directory
 [directory]
-truncation_length = 3
+truncation_length = 0
 truncation_symbol = "…/"
 home_symbol = " ~"
 read_only_style = "197"
-read_only = "  "
+read_only = " 🔒"
+truncate_to_repo	= false
 format = "at [$path]($style)[$read_only]($read_only_style) "
 
-# Shows current git branch
 [git_branch]
 symbol = " "
 format = "via [$symbol$branch]($style) "
-# truncation_length = 4
+truncation_length = 10
 truncation_symbol = "…/"
 style = "bold green"
 
-# Shows current git status
 [git_status]
 format = '[\($all_status$ahead_behind\)]($style) '
 style = "bold green"
-conflicted = "⚔️ "
-ahead = "🏎️ 💨 ×${count}"
-behind = "🐢 ×${count}"
-diverged = "🔱 🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count}"
-untracked = "🛤️  ×${count}"
-stashed = "📦 "
-modified = "📝 ×${count}"
-staged = "🗃️  ×${count}"
-renamed = "📛 ×${count}"
-deleted = "🗑️  ×${count}"
-up_to_date = " "
+conflicted = '🏳'
+ahead = ' 🏎💨 '
+behind = ' 😰 '
+diverged = ' 😵 '
+up_to_date = ' ✓ '
+untracked = ' 🤷 '
+stashed = ' 📦 '
+modified = ' 📝 '
+staged = ' [++\($count\)](green) '
+renamed = ' 👅 '
+deleted = ' 🗑 '
+
+[git_commit]
+tag_symbol = '🔖 '
 
 [kubernetes]
 disabled = true
-symbol = "☸ "
+symbol = "󱃾 "
 format = '[$symbol$context( \($namespace\))]($style) in '
 style = "cyan bold"
 
@@ -80,7 +78,7 @@ style = "cyan bold"
 
 [docker_context]
 disabled = false
-symbol = " "
+symbol = "🐳 "
 style = "blue bold"
 format = "via [$symbol$context]($style) "
 only_with_files = true
@@ -88,13 +86,13 @@ only_with_files = true
 [aws]
 disabled = false
 format = 'on [$symbol$profile(\($region\))]($style) '
-symbol = " "
+symbol = " 󰸏 "
 style = "bold yellow"
 
 [gcloud]
-disabled = false
+disabled = true
 format = 'on [$symbol$account(\($region\))]($style) '
-symbol = " "
+symbol = " "
 style = "bold blue"
 
 [helm]
@@ -112,7 +110,7 @@ style = "bold green"
 [package]
 disabled = false
 format = "is [$symbol$version]($style) "
-symbol = " "
+symbol = "📦 "
 style = "208 bold"
 display_private = false
 
@@ -123,24 +121,24 @@ pyenv_prefix = "pyenv "
 python_binary = "python"
 format = 'via [${symbol}${pyenv_prefix}${version}( \($virtualenv\))]($style) '
 style = "yellow bold"
-symbol = " "
+symbol = "🐍 "
 
 [ruby]
 disabled = false
 format = "via [$symbol$version]($style) "
-symbol = " "
+symbol = "💎 "
 style = "bold red"
 
 [rust]
 disabled = false
 format = "via [$symbol$version]($style) "
-symbol = " "
+symbol = "🦀 "
 style = "bold red"
 
 [terraform]
 disabled = false
 format = "via [$symbol$workspace]($style) "
-symbol = "ﰉ "
+symbol = "󱁢 "
 style = "bold 105"
 
 [time]
