@@ -1,7 +1,16 @@
-# HELLO WORLD
+<img src="images/wip.png" width=500 />
 
-Those are my dot files and here is some todos to finish that repo:
+## nothing big to say about it just a bunch of instructions here READ CAREFULLY
 
-- [ ] fix that README.md (instructions and description)
-- [ ] add the dotdrop to manage the dotfiles
-- [ ] add the windows environment
+## tools used
+
+- [dotdrop](https://github.com/deadc0de6/dotdrop#installation)
+- [homebrew](https://brew.sh/)
+-
+
+## inspired by some other dotfiles aka awesome-dots
+
+- [lissy93/dotfiles](https://github.com/Lissy93/dotfiles)
+- [christianlempa/dotfiles](https://github.com/ChristianLempa/dotfiles)
+- [rochacbruno/dotfiles](https://github.com/rochacbruno/dotfiles)
+-
