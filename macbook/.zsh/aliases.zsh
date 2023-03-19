@@ -1,68 +1,67 @@
-# ALIASES
-# --------------
-# SYSTEM
-alias c="clear"
-alias omzr="omz reload"
-alias l="exa --icons --group-directories-first -lah"
-alias ls="exa --icons --group-directories-first"
-alias ll="exa --icons --group-directories-first -l"
-alias grep='grep --color'
-alias rm="rm -i"
-alias t="tree -C --dirsfirst"
-alias cp="rsync --progress -avz --ignore-existing"
-alias to="function _to() { cd '$@' && tree; }; _to"
-alias search="function _search() { grep -r --exclude-dir={.git,.svn} $1*; }; _search"
-alias ports="netstat -a | grep -i 'listen'"
-alias flushdns="function _flushdns() { sudo dscacheutil -flushcache; }; _flushdns"
-alias path='echo $PATH | tr ":" "\n"'
-alias q="exit"
-alias python="python3"
+# aliases
 # --------------
 
-# MACOS
+# system
+alias c="clear"
+alias cp="rsync --progress -avz --ignore-existing"
+alias flushdns="function _flushdns() { sudo dscacheutil -flushcache; }; _flushdns"
+alias grep='grep --color'
+alias l="exa --icons --group-directories-first -a"
+alias ll="exa --icons --group-directories-first -l"
+alias ls="exa --icons --group-directories-first -lah"
+alias lzd="lazydocker"
+alias omzr="omz reload"
+alias ports="netstat -a | grep -i 'listen'"
+alias path='echo $PATH | tr ":" "\n"'
+alias q="exit"
+alias rm="rm -i"
+alias t="tree -C --dirsfirst"
+# --------------
+
+# homebrew
 alias bubu="brew update && brew upgrade && brew autoremove && brew cleanup --prune=0"
 # --------------
 
-# BINARIES
-alias tf="terraform"
-alias dt="datree"
-alias nvim="lvim"
-alias lv="lvim"
-alias lvalias="lvim ~/.oh-my-zsh/custom/aliases.zsh"
-alias b="bat"
+# binaries
 alias a="aria2c"
+alias b="bat"
+alias dt="datree"
+alias tf="terraform"
+alias nv="nvim"
+alias nvalias="nvim ~/.oh-my-zsh/custom/aliases.zsh"
 # --------------
 
-# KUBERNETES
+# kubernetes
+alias h="helm"
 alias k="kubectl"
 alias kaf="kubectl apply -f"
 alias kdf="kubectl delete -f"
 alias kclean="kubectl config unset current-context"
-alias h="helm"
 # --------------
 
-# GCP
+# git
+alias lzg="lazygit"
+# --------------
+
+# zet
+alias zka="zk -W ~/zk"
+alias zkday="zk new -W ~/zk --template=/Users/pedro/zk/.zk/templates/daily.md"
+alias zki="zka edit -i"
+alias zkmentorship="zk new -W ~/zk --template=/Users/pedro/zk/.zk/templates/mentorship.md"
+alias zkn="zka new -t"
+alias zkzek="zk edit -i -W /Users/pedro/workspace/rwxrob/zet/docs"
+alias zkzet="zk -W /Users/pedro/workspace/rwxrob/zet/docs edit -i"
+# --------------
+
+# gcp
 alias gcl="gcloud"
 alias gclin="gcloud auth login"
 # --------------
 
-# AWS
+# aws
 # --------------
 
-# GIT
-# --------------
-
-# ZET 
-alias zka="zk -W ~/zk"
-alias zkzet="zk -W /Users/pedro/workspace/rwxrob/zet/docs edit -i"
-alias zki="zka edit -i"
-alias zkn="zka new -t"
-alias zkzek="zk edit -i -W /Users/pedro/workspace/rwxrob/zet/docs"
-alias zkday="zk new -W ~/zk --template=/Users/pedro/zk/.zk/templates/daily.md"
-alias zkmentorship="zk new -W ~/zk --template=/Users/pedro/zk/.zk/templates/mentorship.md"
-# --------------
-
-# LEAPP
+# leapp cloud
 alias lpp="leapp"
 alias lstart="leapp session start"
 alias lstop="leapp session stop"

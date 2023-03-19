@@ -30,4 +30,6 @@ plugins=(
         vscode
         web-search
         yarn
+        zsh-autosuggestions
+        zsh-syntax-highlighting
         )
