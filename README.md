@@ -1,7 +1,3 @@
-# HELLO WORLD
+# dot repo
 
-Those are my dot files and here is some todos to finish that repo:
-
-- [ ] fix that README.md (instructions and description)
-- [ ] add the dotdrop to manage the dotfiles
-- [ ] add the windows environment
+## nothing big to say about it just a bunch of instructions here READ CAREFULLY
