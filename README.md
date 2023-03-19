@@ -1,4 +1,4 @@
-# dot repo
+<img src="images/wip.png" width=500 />
 
 ## nothing big to say about it just a bunch of instructions here READ CAREFULLY
 
