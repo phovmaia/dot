@@ -1,174 +1,96 @@
-#############################################################
-#############################################################
-# ~/.Brewfile - Software Installs for MacOS                 #
-#                                                           #
-# list of packages I keep via Homebrew                      #
-#                                                           #
-# author:  Pedro Maia                                       #
-# sorce: https://www.github.com/phovmaia/dot                #
-# see brew docs for more info: https://docs.brew.sh         #
-#############################################################
-#############################################################
-
-# options
-cask_args appdir: '~/Applications', require_sha: true
-
-# taps
+tap "aws/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask"
-tap "homebrew/services"
 tap "homebrew/core"
-tap "aws/tap"
+tap "homebrew/services"
 tap "noovolari/brew"
 tap "spotinst/tap"
-
-#############################################################
-# command line (CLI)                                        #
-#############################################################
-
-# CLI essentials
-brew "git"                          # version controll
-brew "neovim"                       # text editor
-brew "starship"                     # shell prompt
-
-# cli basics
-brew "aria2"                    # better wget
-brew "bat"                      # better cat
-brew "diff-so-fancy"            # better diff
-brew "dotdrop"                  # dotfiles manager
-brew "duf"                      # better df
-brew "exa"                      # better ls
-brew "jq"                       # json parser
-brew "procs"                    # better ps
-brew "ripgrep"                  # better grep
-brew "rsync"                    # better cp
-brew "thefuck"                  # better auto correct
-brew "tldr"                     # community-maintained docs (better man)
-brew "tree"                     # directory listing as tree structure
-brew "xsel"                     # copy/paste to/from clipboard
-brew "yq"                       # yaml parser
-brew "zoxide"                   # auto-learning navigation (better cd)
-
-# cli monitoring tools
-brew "bmon"                     # bandwidth utilization monitor
-brew "bpytop"                   # better htop
-brew "ctop"                     # container metrics and stats
-brew "dog"                      # better dig
-brew "gping"                    # better ping
-brew "speedtest-cli"            # internet speed test
-
-# cli productivity tools
-brew "enpass-cli"               # password manager
-
-# cli devlopment suits
-brew "httpie"                   # HTTP / API testing client
-brew "lazydocker"               # full docker management app
-brew "lazygit"                  # full git management app
-brew "kdash"                    # kubernetes dashboard
-
-# cli external services
-brew "asciinema"                # record terminal sessions
-brew "navi"                     # cheatsheet tool
-brew 'tmate'                    # Share a terminal session via internet
-brew "zk"                       # note taking cli (suggested by @rwxrob and for zettlekasten)
-
-# cli fun
-brew "asciiquarium"             # fish tank in terminal
-brew "cowsay"                   # cow say your message
-brew "figlet"                   # output text as big ASCII art text
-brew "lolcat"                   # output raibow colored text
-brew "neofetch"                 # show system data and ditstro info
-brew "pipes-sh"                 # terminal pipe screen saver
-
-#############################################################
-# software development                                      #
-#############################################################
-
-# development apps
-cask "warp"                     # better terminal
-cask "insomnia"                 # API testing client
-cask "postman"                  # API testing client
-brew "postman-cli"              # API testing client
-cask "visual-studio-code"       # code editor
-
-# development languages, compilers, package managers
-brew "gcc"                      # C/C++ compiler
-brew "go"                       # go compiler
-brew "lua"                      # lua interpreter
-brew "luarocks"                 # lua package manager
-brew "nvm"                      # node version manager
-brew "python"                   # python interpreter
-brew "rust"                     # rust language
-
-# devops
-brew "ansible"                  # configuration management tool
-brew "docker"                   # containerization tool
-brew "docker-compose"           # container orchestration tool
-brew "helm"                     # kubernetes package manager
-brew "kubernetes-cli"           # kubernetes cli
-brew "kubectx"                  # kubernetes cli context manager
-brew "noovolari/brew/leapp-cli"
-brew "terraform"                # infrastructure as code tool
-brew "terragrunt"               # terraform wrapper
-brew "teleport"                 # ssh server
-brew "velero"                   # kubernetes backup tool
-cask "termius"                  # ssh client
-
-# development utilities
-brew "gh"                       # github cli
-brew "gitkraken"                # git gui
-
-# network tools
-brew "bettercap"                # network scanning and monitoring
-brew "nmap"                     # port scanner
-cask "wireshark"                # network analyzer + packet capture
-
-# security tools
-brew "openssl"                  # ssl/tls toolkit
-brew "openssh"                  # ssh client and server
-brew "ca-certificates"          # ssl/tls certificates
-
-# cloud cli tools
-brew "amazon-ecs-cli"           # amazon ecs cli
-brew "aws/tap/copilot-cli"      # amazon cli tool for ecs, eks and other
-brew "awscli"                   # amazon cli
-cask "session-manager-plugin"   # aws session manager plugin
-brew "eksctl"                   # amazon eks cli
-
+brew "amazon-ecs-cli"
+brew "ca-certificates"
+brew "aria2"
+brew "asciinema"
+brew "asciiquarium"
+brew "awscli"
+brew "bat"
+brew "bpytop"
+brew "ctop"
+brew "datree"
 brew "ddgr"
+brew "docker-compose"
+brew "dog"
+brew "dotdrop"
+brew "duf"
+brew "eksctl"
+brew "enpass-cli"
+brew "exa"
+brew "gh"
+brew "go"
+brew "go-task"
+brew "gping"
+brew "grep"
+brew "helm"
+brew "htop"
+brew "httpie"
+brew "jq"
+brew "kind"
+brew "kubernetes-cli"
+brew "kubectx"
+brew "lazydocker"
+brew "lazygit"
+brew "luarocks"
 brew "mdbook"
+brew "navi"
+brew "neofetch"
+brew "neovim"
+brew "nmap"
+brew "openssh"
+brew "procs"
+brew "python@3.10"
+brew "python-tk@3.10"
+brew "python@3.9"
+brew "python-tk@3.9"
+brew "ripgrep"
+brew "rust"
+brew "speedtest-cli"
+brew "starship"
+brew "teleport"
+brew "terraform"
+brew "terragrunt"
+brew "thefuck"
+brew "tldr"
+brew "tre"
+brew "tree"
+brew "velero"
+brew "wget"
+brew "yq"
+brew "zk"
+brew "zsh-syntax-highlighting"
+brew "aws/tap/copilot-cli"
+brew "noovolari/brew/leapp-cli"
 brew "spotinst/tap/spotctl"
-
-#############################################################
-# desktop applications                                      #
-#############################################################
-
-# communication
-cask "amazon-chime"             # amazon video conferencing
-cask "telegram"                 # messaging app
-cask "zoom"                     # video conferencing
-
-# utilities
-cask "balenaetcher"             # flash images
-cask "betterdisplay"            # better display settings
-cask "brave-browser"            # web browser
-cask "enpass"                   # password manager
-cask "hiddenbar"                # hide menu bar
-cask "raycast"                  # better spotlight (maintained by a brazilian)
-cask "obs"                      # screen recorder
-
-
-# cloud tools
-cask "drawio"                   # draw diagrams
-cask "leapp"                    # cloud credentials manager
-cask "google-cloud-sdk"         # google cloud sdk
-cask "lens"                     # kubernetes gui
-
-brew "iproute2mac"              # MacOS port of netstat and ifconfig
-
-
-# fonts
-tap "homebrew/cask-fonts"       # fonts
-cask "font-fira-code"           # firacode font
-cask "font-hack"                # hack font
-cask "space-mono"               # space mono font
+cask "amazon-chime"
+cask "balenaetcher"
+cask "betterdisplay"
+cask "brave-browser"
+cask "drawio"
+cask "enpass"
+cask "focused"
+cask "github"
+cask "google-chrome"
+cask "google-cloud-sdk"
+cask "insomnia"
+cask "kindle"
+cask "leapp"
+cask "lens"
+cask "macdown"
+cask "obs"
+cask "postman"
+cask "postman-cli"
+cask "raycast"
+cask "session-manager-plugin"
+cask "telegram"
+cask "termius"
+cask "warp"
+cask "webcatalog"
+cask "whatsapp"
+cask "zoom"
